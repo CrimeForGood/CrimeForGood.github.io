@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>crimeforgood.xyz: what attackers do first, reported instead of used</title>
+  <meta name="description" content="crimeforgood finds leaked keys, booby-trapped repos and hacked sites the way an attacker would, then reports them. Open lists, open source tools, and security research by people who stay unnamed.">
+  <meta name="theme-color" content="#06051a">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preload" href="fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="#" aria-label="crimeforgood.xyz home">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#9b7bff"/>
+          <stop offset="1" stop-color="#5b2fd6"/>
+          </linearGradient>
+          <clipPath id="c"><circle cx="32" cy="32" r="13.5"/></clipPath>
+          <path id="brace" d="M22 8h-4a6 6 0 0 0-6 6v10a6 6 0 0 1-6 6v4a6 6 0 0 1 6 6v10a6 6 0 0 0 6 6h4"/>
+          </defs>
+          <g id="mark">
+          <g fill="none" stroke="url(#g)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+          <use href="#brace"/>
+          <use href="#brace" transform="matrix(-1 0 0 1 64 0)"/>
+          </g>
+          <g clip-path="url(#c)" stroke="url(#g)" stroke-width="3.2" stroke-linecap="round">
+          <path d="M18 21h28M18 26.5h28M18 32h28M18 37.5h28M18 43h28"/>
+          </g>
+          <g fill="#06051a" stroke="url(#g)" stroke-width="1.6">
+          <circle cx="37" cy="26.5" r="2.4"/>
+          <circle cx="27" cy="32" r="2.4"/>
+          <circle cx="35" cy="37.5" r="2.4"/>
+          </g>
+          </g>
+        </svg>
+        <span class="wordmark">crime<span>for</span>good.xyz</span>
+      </a>
+      <nav aria-label="Sections">
+        <a href="#work">What we do</a>
+        <a href="#lists">The lists</a>
+        <a href="#process">How listing works</a>
+        <a href="#tools">Tools</a>
+      </nav>
+      <a class="btn btn-ghost" href="https://github.com/CrimeForGood">GitHub</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>We do what attackers do first. Then we tell you.</h1>
+          <p class="lede">crimeforgood finds leaked keys, booby-trapped repos and hacked sites the way an attacker would, and reports them instead of using them. The lists and the tools are open source.</p>
+          <div class="actions">
+            <a class="btn btn-solid" href="#work">See what we do</a>
+            <a class="btn btn-ghost" href="https://github.com/CrimeForGood">Follow on GitHub</a>
+          </div>
+          <p class="status"><span class="dot" aria-hidden="true"></span>Pre-launch. The scanner and the lists are being built in the open.</p>
+        </div>
+        <div class="globe" aria-hidden="true">
+          <canvas id="globe"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="band">
+      <div class="wrap">
+        <h2>Same playbook, different ending</h2>
+        <p class="intro">Attackers sweep for what's left open and probe what's meant to hold. So do we. The difference is what happens next.</p>
+        <ul class="tools">
+          <li>
+            <h3>Open lists and tools</h3>
+            <p>We scan public GitHub repositories and publish what we find: repos built to harm you, and repos that will leave you exposed. Anyone can download the lists and run the tools.</p>
+            <span class="planned">Building now</span>
+          </li>
+          <li>
+            <h3>Telling the victims</h3>
+            <p>Threat feeds block hacked sites as if they were malicious, and nobody tells the owner. A dentist whose site is serving injected phishing links needs to hear about it, not just land on a blocklist.</p>
+            <span class="planned">Planned</span>
+          </li>
+          <li>
+            <h3>Research without the spotlight</h3>
+            <p>Plenty of skilled researchers skip bug bounties because they don't want their names known. Companies hire crimeforgood for agreed security work and deal only with us; the researchers do it as our contractors, and the client never learns who they were.</p>
+            <span class="planned">In development</span>
+          </li>
+          <li>
+            <h3>A red-team harness anyone can run</h3>
+            <p>The tools that stress-test AI models cost enterprise money, and the attacks baked into them aren't that sharp. We're building an open harness of real adversarial prompts that runs against any model through its API. You pay for the tokens, not the licence.</p>
+            <span class="planned">In development</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="lists" class="band">
+      <div class="wrap">
+        <h2>Two lists, kept apart</h2>
+        <p class="intro">A repo that attacks you and a repo with a bug in it are different problems. They get different lists, different evidence and different publishing rules.</p>
+        <div class="lists">
+          <article class="list list-mal">
+            <h3>Malicious</h3>
+            <p>Repos written to hurt whoever runs them: typosquats, credential stealers, backdoored forks, fake exploit code that carries a payload.</p>
+            <dl>
+              <div><dt>Published</dt><dd>As soon as the evidence is recorded</dd></div>
+              <div><dt>What to do</dt><dd>Don't clone it, don't install it</dd></div>
+            </dl>
+          </article>
+          <article class="list list-vuln">
+            <h3>Vulnerable</h3>
+            <p>Honest projects with a flaw that puts their users at risk: leaked secrets, known-vulnerable dependencies, unsafe defaults. Not bad, but worth knowing about.</p>
+            <dl>
+              <div><dt>Published</dt><dd>After the maintainer has been told and had time to fix it</dd></div>
+              <div><dt>What to do</dt><dd>Pin, patch or wait for the fix</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="record" class="band">
+      <div class="wrap record-grid">
+        <div>
+          <h2>Every entry shows its evidence</h2>
+          <p class="intro">A listing is a claim about someone's code, so each one says which rule fired, on which commit, in which file. If you can't reproduce it, it shouldn't be there.</p>
+          <p class="note">These are example records with made-up repos. Field names may change before the first release.</p>
+        </div>
+        <div class="specimen">
+          <div class="tabs" role="tablist" aria-label="Example records">
+            <button role="tab" id="tab-mal" aria-controls="panel-mal" aria-selected="true" class="tab tab-mal">Malicious</button>
+            <button role="tab" id="tab-vuln" aria-controls="panel-vuln" aria-selected="false" class="tab tab-vuln" tabindex="-1">Vulnerable</button>
+          </div>
+          <pre id="panel-mal" role="tabpanel" aria-labelledby="tab-mal" tabindex="0"><code><span class="k">list</span>        <span class="v-mal">malicious</span>
+<span class="k">repo</span>        github.com/example-user/reqeusts-toolkit
+<span class="k">finding</span>     Install script sends environment
+            variables to a remote host
+<span class="k">rule</span>        install-hook-exfiltration
+<span class="k">commit</span>      3f9a1c2
+<span class="k">file</span>        setup.py, line 14
+<span class="k">first seen</span>  2026-01-01
+<span class="k">status</span>      published</code></pre>
+          <pre id="panel-vuln" role="tabpanel" aria-labelledby="tab-vuln" tabindex="0" hidden><code><span class="k">list</span>        <span class="v-vuln">vulnerable</span>
+<span class="k">repo</span>        github.com/example-org/invoice-service
+<span class="k">finding</span>     Live cloud access key committed
+            to the repository
+<span class="k">rule</span>        committed-secret
+<span class="k">commit</span>      b71e0d4
+<span class="k">file</span>        config/deploy.env, line 3
+<span class="k">first seen</span>  2026-01-01
+<span class="k">status</span>      maintainer notified, not yet public</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="band">
+      <div class="wrap">
+        <h2>How a repo gets listed</h2>
+        <ol class="steps">
+          <li><h3>Scan</h3><p>Open source rules run against public code on GitHub. We read repositories. We don't probe anyone's live systems.</p></li>
+          <li><h3>Record the evidence</h3><p>A finding only counts with the rule, commit, file and line attached, so anyone can check it.</p></li>
+          <li><h3>Tell the maintainer</h3><p>For vulnerable repos, the maintainer hears first and gets time to fix it. Malicious repos skip this step.</p></li>
+          <li><h3>Publish</h3><p>The entry goes on the open list, free to download and build on.</p></li>
+          <li><h3>Correct</h3><p>Anyone can dispute an entry. Fixed repos come off the vulnerable list, and mistakes are removed in public.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="tools" class="band">
+      <div class="wrap">
+        <h2>Tools for everyone</h2>
+        <p class="intro">Nothing here ships yet. This is what's being built first, and all of it will be open source.</p>
+        <ul class="tools">
+          <li>
+            <h3>Check a repo</h3>
+            <p>Ask whether a repository is on either list, and why, before you clone it.</p>
+            <code>crimeforgood check github.com/owner/repo</code>
+            <span class="planned">Planned</span>
+          </li>
+          <li>
+            <h3>Check your dependencies</h3>
+            <p>Run it in CI and fail the build when something you depend on points at a listed repo.</p>
+            <span class="planned">Planned</span>
+          </li>
+          <li>
+            <h3>Download the lists</h3>
+            <p>Both lists as plain JSON under an open licence, for your own scanners and research.</p>
+            <span class="planned">Planned</span>
+          </li>
+          <li>
+            <h3>Red-team a model</h3>
+            <p>Run a library of real adversarial prompts against any model and see what gets through, for the price of the API calls.</p>
+            <code>crimeforgood redteam &lt;provider/model&gt;</code>
+            <span class="planned">Planned</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2>What we hold to</h2>
+        <dl class="values">
+          <div><dt>Researchers stay unnamed</dt><dd>We don't. crimeforgood answers for the work, so the people doing it can stay out of view of clients and the public.</dd></div>
+          <div><dt>Open source</dt><dd>The scanner, the rules and the lists are public. Anyone can see how a repo ended up listed.</dd></div>
+          <div><dt>Ethical by design</dt><dd>We look at what's public or what we've been hired to test. Owners are told first, and corrections are made in the open.</dd></div>
+          <div><dt>Crime for good</dt><dd>The skills attackers use, pointed at keeping the community safe.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <div>
+        <span class="wordmark">crime<span>for</span>good.xyz</span>
+        <p>Scan. Find. Report. Impact.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://github.com/CrimeForGood">View on GitHub</a>
+    </div>
+  </footer>
+
+  <script src="globe-data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
