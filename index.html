@@ -44,9 +44,10 @@
       </a>
       <nav aria-label="Sections">
         <a href="#work">What we do</a>
-        <a href="#lists">The lists</a>
+        <a href="#lists">Repo lists</a>
         <a href="#process">How listing works</a>
         <a href="#tools">Tools</a>
+        <a href="#disputes">Disputes</a>
       </nav>
       <a class="btn btn-ghost" href="https://github.com/CrimeForGood">GitHub</a>
     </div>
@@ -57,12 +58,12 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <h1>We do what attackers do first. Then we tell you.</h1>
-          <p class="lede">crimeforgood finds leaked keys, booby-trapped repos and hacked sites the way an attacker would, and reports them instead of using them. The lists and the tools are open source.</p>
+          <p class="lede">crimeforgood finds leaked keys, booby-trapped repos and hacked sites the way an attacker would, then reports them instead of using them. We read public code and systems we're hired to test; we don't break into anything. The lists and the tools are open source.</p>
+          <p class="status"><span class="dot" aria-hidden="true"></span>Pre-launch. Nothing ships yet; we're building in the open.</p>
           <div class="actions">
-            <a class="btn btn-solid" href="#work">See what we do</a>
+            <a class="btn btn-solid" href="#work">See the plan</a>
             <a class="btn btn-ghost" href="https://github.com/CrimeForGood">Follow on GitHub</a>
           </div>
-          <p class="status"><span class="dot" aria-hidden="true"></span>Pre-launch. The scanner and the lists are being built in the open.</p>
         </div>
         <div class="globe" aria-hidden="true">
           <canvas id="globe"></canvas>
@@ -199,6 +200,19 @@
             <span class="planned">Planned</span>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section id="disputes" class="band">
+      <div class="wrap">
+        <h2>Listed by us, or worried you will be?</h2>
+        <p class="intro">A listing is public and it's about your code, so you get a direct line to challenge it. Here is what to do, and what we don't do.</p>
+        <dl class="values">
+          <div><dt>Dispute an entry</dt><dd>If you maintain a repo we listed and think we're wrong, or you've fixed it, <a href="https://github.com/CrimeForGood/CrimeForGood.github.io/issues">open an issue</a> with the repo and the entry. We re-run the rule against the current code. If it no longer fires, the entry comes off. If we listed it in error, the removal says so.</dd></div>
+          <div><dt>Seen us in your logs?</dt><dd>You haven't. The scanner reads public repositories on GitHub; it doesn't crawl or probe anyone's servers, so there is no crimeforgood traffic to find and nothing to opt out of. If that ever changes, this page will say so first, with a way to identify our requests and ask them to stop.</dd></div>
+          <div><dt>Found a problem in our tools</dt><dd>A private security contact is being set up and will be published here. Until then, <a href="https://github.com/CrimeForGood/CrimeForGood.github.io/issues">open an issue</a> asking for a private channel. Don't put exploit details in it.</dd></div>
+          <div><dt>Hired work only</dt><dd>Beyond public code, we only test systems whose owners have engaged us in writing. Nothing on this site is an offer to test anyone else's.</dd></div>
+        </dl>
       </div>
     </section>
 

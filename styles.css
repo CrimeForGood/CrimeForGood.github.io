@@ -93,8 +93,8 @@ h1 {
   text-wrap: balance;
 }
 .lede { margin-top: 24px; max-width: 46ch; color: var(--muted); font-size: 1.125rem; }
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-.status { margin-top: 28px; font-size: 0.9375rem; color: var(--muted); display: flex; align-items: center; gap: 10px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.status { margin-top: 24px; font-size: 0.9375rem; color: var(--muted); display: flex; align-items: center; gap: 10px; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--vuln); flex: none; }
 .globe { aspect-ratio: 1; width: 100%; max-width: 560px; justify-self: end; }
 .globe canvas { width: 100%; height: 100%; display: block; }
@@ -163,6 +163,8 @@ h3 { font: 650 1.1875rem/1.3 var(--sans); }
 .values { margin-top: 36px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 64px; }
 .values dt { font-weight: 650; font-size: 1.1875rem; }
 .values dd { margin-top: 6px; color: var(--muted); max-width: 46ch; }
+.values dd a { color: var(--text); text-underline-offset: 3px; }
+.values dd a:hover { color: var(--violet-bright); }
 
 /* Footer */
 .foot { border-top: 1px solid var(--line); padding-block: 40px; }
