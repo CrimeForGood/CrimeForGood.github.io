@@ -58,6 +58,8 @@ a { color: inherit; }
 .mark { width: 34px; height: 34px; flex: none; }
 .wordmark { font: 500 1.125rem/1 var(--mono); letter-spacing: -0.02em; }
 .wordmark span { color: var(--violet-bright); }
+.wordmark b { font-weight: 800; }
+.wordmark small { font-size: inherit; color: var(--muted); }
 .top nav { display: flex; gap: 28px; margin-left: auto; font-size: 0.9375rem; }
 .top nav a { text-decoration: none; color: var(--muted); }
 .top nav a:hover { color: var(--text); }
